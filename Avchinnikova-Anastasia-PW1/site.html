@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<header>
+		<h1 class="hedtext">Web design - Practical work 01</h1>
+		<h3 class="hedtext">Anastasiya Auchynnikova</h3>
+	</header>
+	<nav class="leftnav">
+		<ul>
+			<li><a href="#dt1">  A </a></li>
+			<li><a href="#dt2">  B </a></li>
+			<li><a href="#dt3">  C </a></li>
+			<li><a href="#dt4">  D </a></li>
+			<li><a href="#dt5">  E </a></li>
+			<li><a href="#dt6">  F </a></li>
+		</ul>
+	</nav>
+	<main>
+		<dl>
+			<h3>When HTML5 has become a standard?What were the main reasons for developing new standard?</h3>
+			<dt id="dt1">
+				HTML5 became a standard on October 28, 2014, when the World Wide Web Consortium published its Recommendation of HTML5. The main reasons for developing this new standard were to introduce advancements in web technologies, improve mobile-friendliness, provide semantic markup for better structure, establish standardization and interoperability, and promote innovation and market participation. HTML5 aimed to address the evolving needs of web development, improve user experiences, and provide a modern and standardized platform for building web content and applications.
+			</dt>
+			<h3>What is a difference between W3C HTML5 and WHATWG HTML Living Standard?</h3>
+			<dt id="dt2">
+				In 2011 the groups came to the conclusion that they had different goals: the W3C wanted to publish a "finished" version of "HTML5", while the WHATWG wanted to continue working on a Living Standard for HTML, continuously maintaining the specification rather than freezing it in a state with known problems, and adding new features as needed to evolve the platform.
+			</dt>
+			<h3>What is the minimal HTML page code?</h3>
+			<dt id="dt3">
+				The minimal HTML page code usually includes these elements:
+
+				!DOCTYPE html
+				html lang="en"
+				head
+				meta charset="utf-8"
+				title  /title
+				/head
+				body
+				<-- page content -->
+				/body
+				/html
+			</dt>
+			<h3>Comment on semanticand presentational markup. Why presentational markup is considered deprecated now?</h3>
+			<dt id="dt4">
+				Semantic markup refers to using HTML elements that convey meaning and structure to the content, making it more accessible and understandable to both humans and machines. Semantic markup focuses on accurately representing the purpose and meaning of the content, such as using ◁header▷ for a page header or ◁nav▷ for navigation.
+				On the other hand, presentational markup involves using HTML elements primarily for visual styling purposes, without considering the meaning or structure of the content. Examples of presentational markup include using ◁b▷ for bold text or ◁font▷ for changing font styles.
+				Presentational markup is considered deprecated now because it separates the visual presentation from the actual content, making it harder for assistive technologies and search engines to interpret and navigate the page. It also creates maintenance issues since presentational styles are better handled through CSS. Semantic markup, on the other hand, improves accessibility, search engine optimization, and overall code maintainability by providing a clear structure and meaning to the content.
+			</dt>
+			<h3>How you can check browsersupport for particular tag or attribute?</h3>
+			<dt id="dt5">
+				You can check the browser's support for a specific tag or attribute using browser compatibility tables such as MDN Web Docs or Can I use, or check the official documentation of browser manufacturers. You can also use feature detection using the Modernizr JavaScript library to determine whether HTML functions are supported in the user's browser.
+			</dt>
+			<h3>What are the audio and video formats, officially supported byHTML standard? What happens if you use other format?</h3>
+			<dt id="dt6">
+				The HTML standard does not specify a specific set of audio and video formats that are officially supported. Different browsers have their own preferred formats, and the support for specific formats may vary. However, commonly supported video formats include MP4, WebM, and Ogg, while commonly supported audio formats include MP3, Ogg, and WAV. If you use a format that is not supported by a particular browser, the browser will not be able to play the media file, so it's important to consider the compatibility of the formats you choose to ensure broad support across different browsers and devices.
+			</dt>
+		</dl>
+	</main>
+	<footer>
+		<img src="https://abiturient.bsu.by/Data/import/%D0%B8%D0%B1_1.png" alt="sb.bsu.logo" id="img">
+		<video controls id="vid">
+			<source src="videosbbsu.mp4" type="video/mp4">
+			<source src="videosbbsuwe.webm" type="video/webm">
+		</video>
+		<h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h5>
+	</footer>
+</body>
+</html>
