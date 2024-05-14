@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 6: Flexbox Layout</title>
+    <style>
+        /* Global styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Flex container styles */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        /* Top news block styles */
+        .top-news {
+            flex-basis: 65%;
+            padding: 20px;
+            background-color: #f2f2f2;
+            margin-bottom: 20px;
+        }
+
+        .top-news img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* News section styles */
+        .news-section {
+            flex-basis: 30%;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        /* News preview styles */
+        .news-preview {
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+
+        .news-preview img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Aside styles */
+        aside {
+            flex-basis: 100%;
+            padding: 20px;
+            background-color: #ccc;
+        }
+
+        /* Media queries */
+        @media only screen and (max-width: 768px) {
+            /* Tablet breakpoint */
+            .container {
+                flex-direction: column;
+            }
+
+            .top-news {
+                flex-basis: 100%;
+            }
+
+            .news-section {
+                flex-basis: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Website Header</h1>
+    </header>
+
+    <div class="container">
+        <div class="top-news">
+            <h2>Top News</h2>
+            <img src="a5de9db4445e577ffb4aa09c3d73dc09.jpg" alt="Top News Image">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <button>Read More</button>
+        </div>
+
+        <div class="news-section">
+            <div class="news-preview">
+                <img src="9e9979dc0051d115c36ad5b8b196e3b1.jpg" alt="News 1 Thumbnail">
+                <h3>News Title 1</h3>
+                <p class="meta-info">Published on April 20, 2024</p>
+                <p class="excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <button class="read-more">Read More</button>
+            </div>
+            <!-- Repeat the above news-preview structure for other news -->
+        </div>
+        
+        <aside>
+            <h2>Navigation Menu</h2>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </aside>
+    </div>
+</body>
+</html>

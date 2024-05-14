@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 6: Grid Layout</title>
+    <style>
+        /* Global styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header styles */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        .logo img {
+            width: 100px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li:last-child {
+            margin-right: 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        /* Hero block styles */
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+            padding: 20px;
+            background-color: #f2f2f2;
+        }
+
+        .hero img {
+            width: 720px;
+            height: 100px;
+        }
+
+        .hero h1 {
+            margin-top: 0;
+        }
+
+        /* News section styles */
+        .news {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .news-preview {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .news-preview img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Media queries */
+        @media only screen and (max-width: 1024px) {
+            /* Tablet breakpoint */
+            .hero {
+                grid-template-columns: 1fr;
+            }
+
+            .news {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+            /* Smartphone breakpoint */
+            .news {
+                grid-template-columns: 1fr;
+            }
+
+            .excerpt {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="Vedanta-Logo-JPG.jpg" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <img src="a4ba2bd50ed4d173043b58a445cd0445.jpg" alt="Hero Image">
+        <div>
+            <h1>Welcome to Our Website</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+    </div>
+
+    <section class="news">
+        <article class="news-preview">
+            <img src="images.jpg" alt="images.jpg">
+            <h2>News Title 1</h2>
+            <p class="meta-info">Published on April 20, 2024</p>
+            <p class="excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <button class="read-more">Read More</button>
+        </article>
+        <!-- Repeat the above article structure for other news previews -->
+    </section>
+</body>
+</html>
