@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Advanced CSS Selectors and Pseudo-elements</title>
+     <style>
+        /* Resetting fonts and margins */
+        * {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Importing Roboto Regular and Bold */
+        @font-face {
+            font-family: 'Roboto';
+            src: url('path_to_roboto_regular.woff2') format('woff2'),
+                 url('path_to_roboto_regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            src: url('path_to_roboto_bold.woff2') format('woff2'),
+                 url('path_to_roboto_bold.woff') format('woff');
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        /* Applying Roboto Regular font to all elements */
+        * {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* Specificity demonstration */
+        h2 {
+            color: red; /* Specificity: 0,0,1,0 */
+        }
+
+        #text__paragraphs h2 {
+            color: blue; /* Specificity: 0,1,0,0 */
+        }
+
+        /* Complex selectors */
+        #text__paragraphs div p {
+            font-style: italic;
+        }
+
+        /* Pseudo-classes and pseudo-elements */
+        p::first-letter {
+            font-size: 150%;
+        }
+
+        /* Styling for hover */
+        p:hover {
+            background-color: lightgray;
+        }
+
+        /* Styling for last child */
+        table tr td:last-child {
+            color: red;
+        }
+
+        /* Styling for alternating rows */
+        ul li:nth-child(even),
+        table tr:nth-child(odd) {
+            background-color: #f2f2f2;
+        }
+
+        /* Styling for ::selection */
+        ::selection {
+            background-color: lightblue;
+        }
+
+        /* Styling for ::before */
+        ul:before {
+            content: "\2192";
+            margin-right: 5px;
+        }
+
+        /* Applying bold font weight to specific elements */
+        #text__headings h1,
+        #text__blockquotes blockquote {
+            font-weight: bold;
+        }
+    </style>
+<body id="top">
+    <main>
+        <section id="text">
+            <h1>Headings</h1>
+            <h1>Heading 1</h1>
+            <h2>Heading 2</h2>
+            <h3>Heading 3</h3>
+            <h4>Heading 4</h4>
+            <h5>Heading 5</h5>
+            <h6>Heading 6</h6>
+            <a href="#top">[Top]</a>
+
+            <h2>Paragraphs</h2>
+            <p>A paragraph (from the Greek paragraphos, “to write beside” or “written beside”) is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences. Though not required by the syntax of any language, paragraphs are usually an expected part of formal writing, used to organize longer prose.</p>
+            <a href="#top">[Top]</a>
+
+            <h2>Blockquotes</h2>
+            <blockquote>A block quotation (also known as a long quotation or extract) is a quotation in a written document, that is set off from the main text as a paragraph, or block of text. It is typically distinguished visually using indentation and a different typeface or smaller size quotation. It may or may not include a citation, usually placed at the bottom. Said no one, ever.</blockquote>
+            <a href="#top">[Top]</a>
+
+            <h2>Lists</h2>
+            <dl>
+                <dt>Definition List Title</dt>
+                <dd>This is a definition list division.</dd>
+            </dl>
+            <ol>
+                <li>List Item 1</li>
+                <li>List Item 2</li>
+                <li>List Item 3</li>
+            </ol>
+            <ul>
+                <li>List Item 1</li>
+                <li>List Item 2</li>
+                <li>List Item 3</li>
+            </ul>
+            <a href="#top">[Top]</a>
+
+            <h2>Horizontal rules</h2>
+            <hr>
+            <a href="#top">[Top]</a>
+
+            <h2>Tabular data</h2>
+            <table>
+                <caption>Table Caption</caption>
+                <thead>
+                    <tr>
+                        <th>Table Heading 1</th>
+                        <th>Table Heading 2</th>
+                        <th>Table Heading 3</th>
+                        <th>Table Heading 4</th>
+                        <th>Table Heading 5</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Table Cell 1</td>
+                        <td>Table Cell 2</td>
+                        <td>Table Cell 3</td>
+                        <td>Table Cell 4</td>
+                        <td>Table Cell 5</td>
+                    </tr>
+                    <tr>
+                        <td>Table Cell 1</td>
+                        <td>Table Cell 2</td>
+                        <td>Table Cell 3</td>
+                        <td>Table Cell 4</td>
+                        <td>Table Cell 5</td>
+                    </tr>
+                    <tr>
+                        <td>Table Cell 1</td>
+                        <td>Table Cell 2</td>
+                        <td>Table Cell 3</td>
+                        <td>Table Cell 4</td>
+                        <td>Table Cell 5</td>
+                    </tr>
+                    <tr>
+                        <td>Table Cell 1</td>
+                        <td>Table Cell 2</td>
+                        <td>Table Cell 3</td>
+                        <td>Table Cell 4</td>
+                        <td>Table Cell 5</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>Table Footer 1</td>
+                        <td>Table Footer 2</td>
+                        <td>Table Footer 3</td>
+                        <td>Table Footer 4</td>
+                        <td>Table Footer 5</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <a href="#top">[Top]</a>
+        </section>
+        </section>
+    </main>
+
+    <article id="text__paragraphs">
+        <h2>Additional questions</h2>
+        <p><strong>What is selector's specificity and how is it calculated?</strong>Selector specificity is a weight that determines which styles are applied to an element when multiple conflicting styles exist. It is calculated based on the combination of type selectors, class selectors, and ID selectors present in the selector. The specificity is represented as a four-part number, with each part indicating the specificity of a different type of selector.</p>
+        <p><strong>What are complex selectors?</strong> Complex selectors are CSS selectors that combine multiple simple selectors to target elements with specific characteristics or relationships in the document tree. Examples include descendant selectors, child selectors, sibling selectors, attribute selectors, and pseudo-classes.</p>
+        <p><strong>What is the difference between pseudo-classes and pseudo-elements?</strong> Pseudo-classes are keywords added to selectors that specify a special state of the selected elements. Examples include :hover, :active, :focus, and :first-child. Pseudo-elements, on the other hand, are keywords added to selectors that style a specific part of an element's content. Examples include ::before, ::after, ::first-letter, and ::selection.</p>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
