@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decorated Web Development Report</title>
+    <style>
+        /* Borders and padding for block elements */
+        article {
+            border: 2px solid #333;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        section {
+            border: 1px dashed #666;
+            padding: 15px;
+            margin: 15px;
+        }
+
+        /* Borders and padding for inline elements */
+        strong {
+            border-bottom: 2px solid #ff0000;
+            padding: 3px;
+            margin: 5px;
+        }
+
+        em {
+            border: 1px solid #00ff00;
+            padding: 2px;
+            margin: 5px;
+        }
+
+        /* Background styles for Lorem Ipsum paragraphs */
+        p:nth-of-type(1) {
+            background-color: #f0f0f0;
+            padding: 10px;
+        }
+
+        p:nth-of-type(2) {
+            background-color: rgba(255, 255, 0, 0.5);
+            padding: 10px;
+        }
+
+        p:nth-of-type(3) {
+            background: linear-gradient(to right, #ff6600, #ffcc00);
+            padding: 10px;
+        }
+
+        p:nth-of-type(4) {
+            background: repeating-linear-gradient(to right, #3399ff, #3399ff 30px, #ffffff 30px, #ffffff 60px);
+            padding: 10px;
+        }
+
+        p:nth-of-type(5) {
+            background-image: url('background.jpg');
+            padding: 10px;
+            background-size: cover;
+        }
+
+        p:nth-of-type(6) {
+            background-image: url('background1.jpg'), url('background2.jpg');
+            padding: 10px;
+            background-size: cover;
+            background-blend-mode: multiply;
+        }
+
+        /* Optional styling for the floated image */
+        img {
+            float: left;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <article>
+            <h1>Decorated Web Development Report</h1>
+            
+            <section>
+                <h2>Opening Developer Console in Mozilla Firefox and Safari</h2>
+                <p>
+                    To open the developer console in Mozilla Firefox, you can use the keyboard shortcut 
+                    <strong>Ctrl + Shift + K</strong> (Windows/Linux) or <strong>Cmd + Option + K</strong> (Mac). 
+                    Alternatively, you can right-click on any page element and select "Inspect Element" from the context menu.
+                </p>
+                <p>
+                    In Safari, you can open the developer console by pressing 
+                    <em>Option + Command + C</em>. Another way is to go to Safari's menu bar, 
+                    select "Develop," and then choose "Show Web Inspector."
+                </p>
+            </section>
+
+            <section>
+                <h2>Preferred Method for Including Internal Links</h2>
+                <p>
+                    Generally, the preferred method for including internal links in HTML pages is using relative links. 
+                    Relative links are advantageous because they are shorter, more flexible, and easier to maintain. 
+                    They allow you to move your files around within your website's directory structure without breaking links.
+                </p>
+                <p>
+                    However, absolute links have their use cases. They are necessary when linking to resources outside 
+                    of your own website or when specifying a specific location within your website that is not relative to 
+                    the current page.
+                </p>
+            </section>
+
+            <section>
+                <h2>Image Formats in Web Development</h2>
+                <p>
+                    <strong>JPG (or JPEG):</strong> This format is commonly used for photographs and complex images 
+                    with many colors. It supports compression, which reduces file size but may result in a loss of image quality.
+                </p>
+                <p>
+                    <strong>GIF (Graphics Interchange Format):</strong> GIFs are best suited for simple graphics, logos, 
+                    and images with large areas of solid colors. They support animation and transparency but are limited 
+                    to 256 colors.
+                </p>
+                <p>
+                    <strong>PNG (Portable Network Graphics):</strong> PNG is ideal for images with transparent backgrounds 
+                    or for images that require lossless compression. It supports millions of colors and is widely used 
+                    for web graphics.
+                </p>
+                <p>
+                    <strong>WEBP:</strong> WEBP is a modern image format developed by Google. It provides superior 
+                    compression and smaller file sizes compared to JPG and PNG while maintaining high quality. 
+                    It supports both lossy and lossless compression.
+                </p>
+                <p>
+                    <strong>SVG (Scalable Vector Graphics):</strong> SVG is a vector image format that uses XML-based 
+                    markup. It is ideal for graphics that need to scale without losing quality, such as logos, icons, 
+                    and illustrations. SVG images are resolution-independent and can be manipulated with CSS and JavaScript.
+                </p>
+            </section>
+
+            <section>
+                <h2>Image Screenshot</h2>
+                <p>
+                    <img src="css-tricks.com_ (2).png" alt="css-tricks.com_ (2).png" width="200" height="20">
+                    This screenshot demonstrates the process of opening the developer console in Mozilla Firefox.
+                </p>
+            </section>
+            
+        </article>
+    </main>
+
+    <!-- Lorem Ipsum paragraphs with different background styles -->
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend sapien eget tortor interdum, vitae eleifend lorem hendrerit. Nullam et libero eu ligula luctus tristique.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend sapien eget tortor interdum, vitae eleifend lorem hendrerit. Nullam et libero eu ligula luctus tristique.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend sapien eget tortor interdum, vitae eleifend lorem hendrerit. Nullam et libero eu ligula luctus tristique.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend sapien eget tortor interdum, vitae eleifend lorem hendrerit. Nullam et libero eu ligula luctus tristique.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend sapien eget tortor interdum, vitae eleifend lorem hendrerit. Nullam et libero eu ligula luctus tristique.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend sapien eget tortor interdum, vitae eleifend lorem hendrerit. Nullam et libero eu ligula luctus tristique.</p>
+
+</body>
+</html>
+
