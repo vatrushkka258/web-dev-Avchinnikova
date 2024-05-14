@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Practical 7</title>
+    <script>
+        function calculate(num1, operator, num2) {
+            switch(operator) {
+                case '+':
+                    return num1 + num2;
+                case '-':
+                    return num1 - num2;
+                case '*':
+                    return num1 * num2;
+                case '/':
+                    if(num2 != 0) {
+                        return num1 / num2;
+                    } else {
+                        return "Error: Division by zero is not allowed.";
+                    }
+                default:
+                    return "Error: Invalid operator.";
+            }
+        }
+        function performCalculation() {
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var operator = document.getElementById('operator').value;
+            var num2 = parseFloat(document.getElementById('num2').value);
+            var result = calculate(num1, operator, num2);
+            document.getElementById('result').value = "The result is: " + result;
+        }
+    </script>
+    <style>
+        .slide {
+            display: none;
+        }
+        .slide.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <label for="num1">Number 1:</label><br>
+        <input type="number" id="num1" name="num1" value="0"><br>
+        <label for="operator">Operator:</label><br>
+        <select id="operator" name="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select><br>
+        <label for="num2">Number 2:</label><br>
+        <input type="number" id="num2" name="num2" value="0"><br>
+        <input type="button" value="Calculate" onclick="performCalculation()">
+        <input type="reset" value="Reset">
+    </form>
+    <output id="result"></output>
+    <div id="slider">
+        <div class="slide active">
+             <title>Slider with Answers</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+</head>
+<body>
+    <div class="owl-carousel owl-theme">
+        <div class="item">
+            <h4>1. Repaint and Reflow</h4>
+            <p>Reflow refers to the process of recalculating the layout and position of elements on a webpage. Repaint, on the other hand, is the process of redrawing elements on a webpage to reflect changes in their appearance.</p>
+        </div>
+        <div class="item">
+            <h4>2. JavaScript and Page Performance</h4>
+            <p>JavaScript can have both positive and negative effects on the speed and performance of a web page. It can impact page load speed and performance. Excessive use of JavaScript and the size of JavaScript files can contribute to longer load times and negatively affect performance.</p>
+        </div>
+        <div class="item">
+            <h4>3. Minification of the Script</h4>
+            <p>Minification is the process of removing unnecessary characters from the source code of interpreted programming languages or markup languages without changing its functionality. Minification of scripts is useful for improving performance, reducing file size, faster load times, bandwidth optimization, and code readability.</p>
+        </div>
+        <div class="item">
+            <h4>4. JS Web Worker</h4>
+            <p>A JS Web Worker is a feature in JavaScript that allows web content to run scripts in background threads, separate from the main thread that handles the user interface. Web Workers are particularly useful in performing computationally expensive tasks, fetching data from external sources, background processing, and improving performance.</p>
+        </div>
+        <div class="item">
+            <h4>5. Sources</h4>
+            <p>StackOverflow, ExplainThis, Google Developers, Gist, MDN, GTMetrix, Imperva, Cloudflare, FreeCodeCamp, Wikipedia, MakeUseOf</p>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".owl-carousel").owlCarousel({
+                items: 1,
+                loop: true,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                autoplayHoverPause: true
+            });
+        });
+    </script>
+</body>
+</html>
